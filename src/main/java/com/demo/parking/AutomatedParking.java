@@ -50,23 +50,8 @@ public class AutomatedParking implements ParkingCommandExecutor{
 			    positions.add(positon);
 		    }
 		}
-		int sequence = 0;
-
-		System.out.println("*********************** ("+parser.getInput()+") ****************************");
-		for(int i=14; i > -1; i--) {
-			for(int k=0; k < 15; k++) {
-				Position p = new Position(k, i);
-				if((sequence = positions.indexOf(p)) > -1) {
-					System.out.printf("%3s",sequence+1);
-				}
-				else {
-					System.out.printf("%3s","-");
-				}
-			}
-			System.out.println();
-		}
-		System.out.println();
-		System.out.println();
+		MovementPlotter plotter = new SimpleConsoleMovementPlotter();
+		plotter.plotMovement(positions, parser.getInput());
 		return positions;
 	}
 	
