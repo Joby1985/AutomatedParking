@@ -43,4 +43,12 @@ public class CommandParser {
 	public String getCommand() {
 		return command;
 	}
+
+	public String getInput() {
+		return input;
+	}
+
+	public void setInput(String input) {
+		this.input = input;
+	}
 }

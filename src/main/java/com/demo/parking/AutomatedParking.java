@@ -6,8 +6,6 @@ import java.util.List;
 /*import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;*/
 
-
-
 /**
  * Main class to imp.lement parking command
  * 
@@ -37,7 +35,7 @@ public class AutomatedParking implements ParkingCommandExecutor{
 		positions.add(initialPos);
 		Position positon = initialPos;
 				
-		for(int i = 0, n = command.length() ; i < n ; i++) { 
+		for(int i = 0, n = command.length() ; i < n ; i++) {
 		    char code = command.charAt(i);
 		    positon = new Position(positon);
 		    if(code == Position.RIGHT) {
@@ -52,6 +50,23 @@ public class AutomatedParking implements ParkingCommandExecutor{
 			    positions.add(positon);
 		    }
 		}
+		int sequence = 0;
+
+		System.out.println("*********************** ("+parser.getInput()+") ****************************");
+		for(int i=14; i > -1; i--) {
+			for(int k=0; k < 15; k++) {
+				Position p = new Position(k, i);
+				if((sequence = positions.indexOf(p)) > -1) {
+					System.out.printf("%3s",sequence+1);
+				}
+				else {
+					System.out.printf("%3s","-");
+				}
+			}
+			System.out.println();
+		}
+		System.out.println();
+		System.out.println();
 		return positions;
 	}
 	

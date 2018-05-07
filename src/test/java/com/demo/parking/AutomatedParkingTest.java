@@ -16,21 +16,21 @@ import org.junit.Test;
 public class AutomatedParkingTest {
 
 	@Test(expected = InvalidInputException.class)
-	public void testInvalidInputFormat() throws Exception {
+	public void invalid_input_format() throws Exception {
 		String input = "115RFFLF";
 
 		new AutomatedParking(input).move();
 	}
 
 	@Test(expected = InvalidInputException.class)
-	public void testInvalidStartPosition() throws Exception {
+	public void invalid_start_position() throws Exception {
 		String input = "20,11:FRFLRFL";
 
 		new AutomatedParking(input).move();
 	}
 	
 	@Test(expected = OutOfBoundsException.class)
-	public void testOutOfBoundsOverflow() throws Exception {
+	public void outOf_Bounds_overflow() throws Exception {
 		String input = "3,14:FF";
 
 		AutomatedParking aParking = new AutomatedParking(input);
@@ -38,7 +38,7 @@ public class AutomatedParkingTest {
 	}
 	
 	@Test(expected = OutOfBoundsException.class)
-	public void testOutOfBoundsUndeflow() throws Exception {
+	public void outOf_Bounds_underflow() throws Exception {
 		String input = "1,1:LFF";
 
 		AutomatedParking aParking = new AutomatedParking(input);
@@ -46,7 +46,7 @@ public class AutomatedParkingTest {
 	}
 
 	@Test
-	public void testCommnandExecution() throws Exception {
+	public void parses_start_position() throws Exception {
 		// data 1
 		String input = "5,5:RFLFRFLF";
 
