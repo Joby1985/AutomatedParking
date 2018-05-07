@@ -6,6 +6,8 @@ import java.util.List;
 /*import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;*/
 
+
+
 /**
  * Main class to imp.lement parking command
  * 
@@ -18,6 +20,7 @@ public class AutomatedParking implements ParkingCommandExecutor{
 	public static int GRID_MAX_Y_VALUE = 15;
 	
 	//static Logger logger = LoggerFactory.getLogger(AutomatedParking.class);
+	//Test of Git build
 	
 	CommandParser parser;
 	
