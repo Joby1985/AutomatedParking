@@ -19,7 +19,7 @@ public class AutomatedParking implements ParkingCommandExecutor{
 	public static int GRID_MAX_X_VALUE = 15;
 	public static int GRID_MAX_Y_VALUE = 15;
 	
-	//static Logger logger = LoggerFactory.getLogger(AutomatedParking.class);
+	//static Logger logger = LoggerFactory.getLogger(AutomatedParking.class); Test
 	
 	CommandParser parser;
 	
